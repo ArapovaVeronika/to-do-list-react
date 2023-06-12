@@ -1,13 +1,81 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
 }
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap');
+
+
+body{
+  background: linear-gradient(120deg,#ecbdff, #520470);
+  height: 100vh;
+  background-size: 200% 200%;
+  animation: gradient 10s linear infinite;
+}
+#root{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+::-webkit-scrollbar{
+	width: 10px;
+}
+::-webkit-scrollbar-track{
+	background:rgb(184, 159, 207);
+	border-radius: 20px;
+}
+::-webkit-scrollbar-thumb{
+	background: #a048c2;
+	height: 20%;
+	border-radius: 20px;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0 50%;
+    }
+	25%{
+		background-position: 50% 50%;
+	}
+    50%{
+        background-position: 100% 50%;
+    }
+	75%{
+		background-position: 50% 50%;
+	}
+    100%{
+        background-position: 0 50%;
+    }
 }
