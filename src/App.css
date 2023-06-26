@@ -1,3 +1,6 @@
+body{
+  padding: 0 16px;
+}
 .App{
   width: 800px;
   height: 80vh;
