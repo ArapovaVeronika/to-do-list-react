@@ -64,6 +64,7 @@ h1{
 }
 .Task p{
   flex-grow: 1;
+  color: #410550;
 }
 .done p{
   text-decoration: line-through;
