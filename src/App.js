@@ -5,7 +5,6 @@ import Store, { addTask } from './store';
 import { click } from '@testing-library/user-event/dist/click';
 
 function App() {
-  let input = null;
   function setTask(e) {
     console.log(e.type);
     if(e.type == "click"){
@@ -19,7 +18,14 @@ function App() {
         alert("Напиши задачу")
       }
     }else{
-      
+      if(e.key == "Enter") {
+        let taskText = e.target.value;
+        if(taskText !== "") {
+          addTask(taskText);
+          e.target.value = "";
+          e.target.blur();
+        }
+      }
     }
   }
 
